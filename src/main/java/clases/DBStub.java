@@ -14,7 +14,7 @@ public class DBStub {
         throw new UnsupportedOperationException("Clase aún no implementada.");
     }
 
-    public boolean findToDo(String nombre) {
+    public ToDo findToDo(String nombre) {
         throw new UnsupportedOperationException("Clase aún no implementada.");
     }
 
@@ -24,5 +24,23 @@ public class DBStub {
 
     public List<String> listEmails() {
         throw new UnsupportedOperationException("Clase aún no implementada.");
+    }
+    
+    public List<ToDo> listToDos(){
+    	throw new UnsupportedOperationException("Clase aún no implementada.");
+    }
+    public void createToDo(ToDo todo) {
+    	throw new UnsupportedOperationException("Clase aún no implementada.");
+    
+    }
+    
+    public void updateToDo(ToDo todo) {
+    	throw new UnsupportedOperationException("Clase aún no implementada.");
+    
+    }
+    
+    public void deleteToDo(ToDo todo) {
+    	throw new UnsupportedOperationException("Clase aún no implementada.");
+    
     }
 }

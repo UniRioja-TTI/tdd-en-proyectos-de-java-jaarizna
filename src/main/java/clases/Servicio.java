@@ -7,7 +7,10 @@ public class Servicio {
 	
 
 public static void main(String[] args) {
-   
+	DBStub db = new DBStub();
+	Repositorio repo = new Repositorio(db);
+	MailerStub mailer = new MailerStub();
+	Servicio servicio = new Servicio(repo, mailer);
 }
 
 

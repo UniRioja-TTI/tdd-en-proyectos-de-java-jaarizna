@@ -1,4 +1,4 @@
-package com.tt1.test;
+package com.tt1.test.clases;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -8,7 +8,13 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class DBStubTest {
+import clases.DBStub;
+import clases.Repositorio;
+import clases.ToDo;
+
+class RepositorioTest {
+	private Repositorio repo;
+	private DBStub db;
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
@@ -20,7 +26,10 @@ class DBStubTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
+		db = new DBStub();
+		repo=new Repositorio(db);
 	}
+	
 
 	@AfterEach
 	void tearDown() throws Exception {
@@ -28,7 +37,15 @@ class DBStubTest {
 
 	@Test
 	void test() {
-		fail("Not yet implemented");
+		 ToDo t = new ToDo();
+	        t.setNombre("Comprar");
+
+	        // Act
+	        repo.guardarToDo(t);
+
+	        // Assert
+	        assertEquals(t,repo.buscarToDo("Comprar"));
+	    }
 	}
 
-}
+

@@ -1,6 +1,8 @@
 package clases;
 
-public class MailerStub {
+import interfaces.Mailer;
+
+public class MailerStub implements Mailer{
 
 	 public MailerStub() {
 	        throw new UnsupportedOperationException("Clase aún no implementada.");

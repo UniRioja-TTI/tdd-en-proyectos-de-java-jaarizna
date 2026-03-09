@@ -13,7 +13,7 @@ public Repositorio(DBStub db) {
         throw new UnsupportedOperationException("Clase aún no implementada.");
     }
 
-    public boolean buscarToDo(String nombre) {
+    public ToDo buscarToDo(String nombre) {
         throw new UnsupportedOperationException("Clase aún no implementada.");
     }
 
